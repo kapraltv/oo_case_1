@@ -43,7 +43,7 @@ function setParametrs() {
     dot.x2,
     dot.y2
   );
-  if (dot.x2 !== undefined && NaN && '' && dot.y2 !== undefined && NaN && '') {
+  if ( (dot.x2 !== undefined || NaN || '') && (dot.y2 !== undefined || NaN || '') ) {
     checkPosition(n2, dot.x2 , dot.y2);
   }
 
@@ -60,7 +60,7 @@ function setParametrs() {
     dot.x3,
     dot.y3
   );
-  if (dot.x3 !== undefined && NaN && '' && dot.y3 !== undefined && NaN && '') {
+  if ( (dot.x3 !== undefined || NaN || '') && (dot.y3 !== undefined || NaN || '') ) {
     checkPosition(n3, dot.x3, dot.y3);
   }
 
@@ -77,7 +77,7 @@ function setParametrs() {
     dot.x4,
     dot.y4
   );
-  if (dot.x4 !== undefined && NaN && '' && dot.y4 !== undefined && NaN && '') {
+  if ( (dot.x4 !== undefined || NaN || '') && (dot.y4 !== undefined || NaN || '') ) {
     checkPosition(n4, dot.x4, dot.y4);
   }
 
@@ -94,7 +94,7 @@ function setParametrs() {
     dot.x5,
     dot.y5
   );
-  if (dot.x5 !== undefined && NaN && '' && dot.y5 !== undefined && NaN && '') {
+  if ( (dot.x5 !== undefined || NaN || '') && (dot.y5 !== undefined || NaN || '') ) {
     checkPosition(n5, dot.x5, dot.y5);
   }
 
@@ -111,7 +111,7 @@ function setParametrs() {
      dot.x6,
      dot.y6
    );
-   if (dot.x6 !== undefined && NaN && '' && dot.y6 !== undefined && NaN && '') {
+   if ( (dot.x6 !== undefined || NaN || '') && (dot.y6 !== undefined || NaN || '') ) {
     checkPosition(n6, dot.x6, dot.y6);
   }
 
@@ -128,7 +128,7 @@ function setParametrs() {
      dot.x7,
      dot.y7
    );
-   if (dot.x7 !== undefined && NaN && '' && dot.y7 !== undefined && NaN && '') {
+   if ( (dot.x7 !== undefined || NaN || '') && (dot.y7 !== undefined || NaN || '') ) {
     checkPosition(n7, dot.x7, dot.y7);
   }
 
@@ -145,7 +145,7 @@ function setParametrs() {
      dot.x8,
      dot.y8
    );
-   if (dot.x8 !== undefined && NaN && '' && dot.y8 !== undefined && NaN && '') {
+   if ( (dot.x8 !== undefined || NaN || '') && (dot.y8 !== undefined || NaN || '') ) {
     checkPosition(n8, dot.x8, dot.y8);
   }
 
@@ -162,7 +162,7 @@ function setParametrs() {
      dot.x9,
      dot.y9
    );
-   if (dot.x9 !== undefined && NaN && '' && dot.y9 !== undefined && NaN && '') {
+   if ( (dot.x9 !== undefined || NaN || '') && (dot.y9 !== undefined || NaN || '') ) {
     checkPosition(n9, dot.x9, dot.y9);
   }
 
@@ -179,7 +179,7 @@ function setParametrs() {
      dot.x10,
      dot.y10
    );
-   if (dot.x10 !== undefined && NaN && '' && dot.y10 !== undefined && NaN && '') {
+   if ( (dot.x10 !== undefined || NaN || '') && (dot.y10 !== undefined || NaN || '') ) {
     checkPosition(n10, dot.x10, dot.y10);
   }
 
