@@ -5,26 +5,165 @@ var form = null,
   circle = {};
 
 function setParametrs() {
+  
   circle.r = +form.value1.value;
   circle.x = +form.value2.value;
   circle.y = +form.value3.value;
 
-  dot.x1 = +form.value4.value;
-  dot.y1 = +form.value5.value;
+  dot.x0 = +form.value4.value;
+  dot.y0 = +form.value5.value;
 
-  dot.x2 = +form.value6.value;
-  dot.y2 = +form.value7.value;
+  // Первая точка
+  dot.x1 = +form.value6.value;
+  dot.y1 = +form.value7.value;
 
-  var n = locationCircleAndDots(
+  var n1 = locationCircleAndDots(
     circle.x,
     circle.y,
     circle.r,
+    dot.x0,
+    dot.y0,
     dot.x1,
-    dot.y1,
+    dot.y1
+  );
+  checkPosition(n1);
+  
+
+  // Вторая точка
+  dot.x2 = +form.value9.value;
+  dot.y2 = +form.value10.value;
+
+  var n2 = locationCircleAndDots(
+    circle.x,
+    circle.y,
+    circle.r,
+    dot.x0,
+    dot.y0,
     dot.x2,
     dot.y2
   );
-  checkPosition(n);
+  checkPosition(n2);
+
+  // Третья точка
+  dot.x3 = +form.value12.value;
+  dot.y3 = +form.value13.value;
+
+  var n3 = locationCircleAndDots(
+    circle.x,
+    circle.y,
+    circle.r,
+    dot.x0,
+    dot.y0,
+    dot.x3,
+    dot.y3
+  );
+  checkPosition(n3);
+
+  // Четвертая точка
+  dot.x4 = +form.value15.value;
+  dot.y4 = +form.value16.value;
+
+  var n4 = locationCircleAndDots(
+    circle.x,
+    circle.y,
+    circle.r,
+    dot.x0,
+    dot.y0,
+    dot.x4,
+    dot.y4
+  );
+  checkPosition(n4);
+
+  // Пятая точка
+  dot.x5 = +form.value18.value;
+  dot.y5 = +form.value19.value;
+
+  var n5 = locationCircleAndDots(
+    circle.x,
+    circle.y,
+    circle.r,
+    dot.x0,
+    dot.y0,
+    dot.x5,
+    dot.y5
+  );
+  checkPosition(n5);
+
+   // Шестая точка
+   dot.x6 = +form.value21.value;
+   dot.y6 = +form.value22.value;
+   
+   var n6 = locationCircleAndDots(
+     circle.x,
+     circle.y,
+     circle.r,
+     dot.x0,
+     dot.y0,
+     dot.x6,
+     dot.y6
+   );
+   checkPosition(n6);
+
+  //  Седьмая точка
+   dot.x7 = +form.value24.value;
+   dot.y7 = +form.value25.value;
+   
+   var n7 = locationCircleAndDots(
+     circle.x,
+     circle.y,
+     circle.r,
+     dot.x0,
+     dot.y0,
+     dot.x7,
+     dot.y7
+   );
+   checkPosition(n7);
+
+  //  Восьмая точка
+   dot.x8 = +form.value27.value;
+   dot.y8 = +form.value28.value;
+   
+   var n8 = locationCircleAndDots(
+     circle.x,
+     circle.y,
+     circle.r,
+     dot.x0,
+     dot.y0,
+     dot.x8,
+     dot.y8
+   );
+   checkPosition(n8);
+
+  //  Девитая точка
+   dot.x9 = +form.value30.value;
+   dot.y9 = +form.value31.value;
+   
+   var n9 = locationCircleAndDots(
+     circle.x,
+     circle.y,
+     circle.r,
+     dot.x0,
+     dot.y0,
+     dot.x9,
+     dot.y9
+   );
+   checkPosition(n9);
+
+   //  Десятая точка
+   dot.x10 = +form.value33.value;
+   dot.y10 = +form.value34.value;
+   
+   var n10 = locationCircleAndDots(
+     circle.x,
+     circle.y,
+     circle.r,
+     dot.x0,
+     dot.y0,
+     dot.x10,
+     dot.y10
+   );
+  checkPosition(n10);
+
   draw();
 }
 
@@ -50,18 +189,148 @@ function locationCircleAndDots(x, y, r, x1, y1, x2, y2) {
   return 2;
 }
 
+function checkChange() {
+
+}
+
 function checkPosition(locationCircleAndDots) {
+
   switch (locationCircleAndDots) {
+
     case 0:
-      form.value8.value = "Окружность и прямая не пересекаются!";
+
+      if (form.value6.id == 1 && form.value7.id == 1) {
+        form.value8.value = "Окружность и прямая не пересекаются!";
+      }
+
+      if (form.value9.id == 2 && form.value10.id == 2) {
+        form.value11.value = "Окружность и прямая не пересекаются!";
+      }
+
+      if (form.value12.id == 3 && form.value13.id == 3) {
+        form.value14.value = "Окружность и прямая не пересекаются!";
+      }
+
+      if (form.value15.id == 4 && form.value16.id == 4) {
+        form.value17.value = "Окружность и прямая не пересекаются!";
+      }
+
+      if (form.value18.id == 5 && form.value19.id == 5) {
+        form.value20.value = "Окружность и прямая не пересекаются!";
+      }
+
+      if (form.value21.id == 6 && form.value22.id == 6) {
+        form.value23.value = "Окружность и прямая не пересекаются!";
+      }
+
+      if (form.value24.id == 7 && form.value25.id == 7) {
+        form.value26.value = "Окружность и прямая не пересекаются!";
+      }
+
+      if (form.value27.id == 8 && form.value28.id == 8) {
+        form.value29.value = "Окружность и прямая не пересекаются!";
+      }
+
+      if (form.value30.id == 9 && form.value31.id == 9) {
+        form.value32.value = "Окружность и прямая не пересекаются!";
+      }
+
+      if (form.value33.id == 10 && form.value34.id == 10) {
+        form.value35.value = "Окружность и прямая не пересекаются!";
+      }
+
       break;
+
     case 1:
-      form.value8.value = "Прямая касается окружности!";
+
+      if (form.value6.id == 1 && form.value7.id == 1) {
+        form.value8.value = "Окружность и прямая касаются!";
+      }
+
+      if (form.value9.id == 2 && form.value10.id == 2) {
+        form.value11.value = "Окружность и прямая касаются!";
+      }
+
+      if (form.value12.id == 3 && form.value13.id == 3) {
+        form.value14.value = "Окружность и прямая касаются!";
+      }
+
+      if (form.value15.id == 4 && form.value16.id == 4) {
+        form.value17.value = "Окружность и прямая касаются!";
+      }
+
+      if (form.value18.id == 5 && form.value19.id == 5) {
+        form.value20.value = "Окружность и прямая касаются!";
+      }
+
+      if (form.value21.id == 6 && form.value22.id == 6) {
+        form.value23.value = "Окружность и прямая касаются!";
+      }
+
+      if (form.value24.id == 7 && form.value25.id == 7) {
+        form.value26.value = "Окружность и прямая касаются!";
+      }
+
+      if (form.value27.id == 8 && form.value28.id == 8) {
+        form.value29.value = "Окружность и прямая касаются!";
+      }
+
+      if (form.value30.id == 9 && form.value31.id == 9) {
+        form.value32.value = "Окружность и прямая касаются!";
+      }
+
+      if (form.value33.id == 10 && form.value34.id == 10) {
+        form.value35.value = "Окружность и прямая касаются!";
+      }
+
       break;
+
     case 2:
-      form.value8.value = "Окружность и прямая пересекаются!";
+
+      if (form.value6.id == 1 && form.value7.id == 1) {
+        form.value8.value = "Окружность и прямая пересекаются!";
+      }
+
+      if (form.value9.id == 2 && form.value10.id == 2) {
+        form.value11.value = "Окружность и прямая пересекаются!";
+      }
+
+      if (form.value12.id == 3 && form.value13.id == 3) {
+        form.value14.value = "Окружность и прямая пересекаются!";
+      }
+
+      if (form.value15.id == 4 && form.value16.id == 4) {
+        form.value17.value = "Окружность и прямая пересекаются!";
+      }
+
+      if (form.value18.id == 5 && form.value19.id == 5) {
+        form.value20.value = "Окружность и прямая пересекаются!";
+      }
+
+      if (form.value21.id == 6 && form.value22.id == 6) {
+        form.value23.value = "Окружность и прямая пересекаются!";
+      }
+
+      if (form.value24.id == 7 && form.value25.id == 7) {
+        form.value26.value = "Окружность и прямая пересекаются!";
+      }
+
+      if (form.value27.id == 8 && form.value28.id == 8) {
+        form.value29.value = "Окружность и прямая пересекаются!";
+      }
+
+      if (form.value30.id == 9 && form.value31.id == 9) {
+        form.value32.value = "Окружность и прямая пересекаются!";
+      }
+
+      if (form.value33.id == 10 && form.value34.id == 10) {
+        form.value35.value = "Окружность и прямая пересекаются!";
+      }
+      
       break;
+
   }
+
 }
 
 function draw() {
@@ -72,14 +341,41 @@ function draw() {
   canvas.strokeStyle = "#444";
   canvas.arc(circle.x, circle.y, circle.r, 0, Math.PI * 2, true);
 
-  canvas.moveTo(dot.x1 + 0.5, dot.y1 + 0.5);
+  canvas.moveTo(dot.x0 + 0.5, dot.y0 + 0.5);
+  canvas.lineTo(dot.x1 + 0.5, dot.y1 + 0.5);
+
+  canvas.moveTo(dot.x0 + 0.5, dot.y0 + 0.5);
   canvas.lineTo(dot.x2 + 0.5, dot.y2 + 0.5);
+
+  canvas.moveTo(dot.x0 + 0.5, dot.y0 + 0.5);
+  canvas.lineTo(dot.x3 + 0.5, dot.y3 + 0.5);
+
+  canvas.moveTo(dot.x0 + 0.5, dot.y0 + 0.5);
+  canvas.lineTo(dot.x4 + 0.5, dot.y4 + 0.5);
+
+  canvas.moveTo(dot.x0 + 0.5, dot.y0 + 0.5);
+  canvas.lineTo(dot.x5 + 0.5, dot.y5 + 0.5);
+
+  canvas.moveTo(dot.x0 + 0.5, dot.y0 + 0.5);
+  canvas.lineTo(dot.x6 + 0.5, dot.y6 + 0.5);
+
+  canvas.moveTo(dot.x0 + 0.5, dot.y0 + 0.5);
+  canvas.lineTo(dot.x7 + 0.5, dot.y7 + 0.5);
+
+  canvas.moveTo(dot.x0 + 0.5, dot.y0 + 0.5);
+  canvas.lineTo(dot.x8 + 0.5, dot.y8 + 0.5);
+
+  canvas.moveTo(dot.x0 + 0.5, dot.y0 + 0.5);
+  canvas.lineTo(dot.x9 + 0.5, dot.y9 + 0.5);
+
+  canvas.moveTo(dot.x0 + 0.5, dot.y0 + 0.5);
+  canvas.lineTo(dot.x10 + 0.5, dot.y10 + 0.5);
+
   canvas.stroke();
 }
 
 window.onload = function () {
   canvas = document.getElementById("canvas").getContext("2d");
   form = document.forms[0];
-  setParametrs();
   draw();
 };
