@@ -157,7 +157,7 @@ function setParametrs() {
      circle.x,
      circle.y,
      circle.r,
-     dot.x0,
+     dot.x0,asdasd
      dot.y0,
      dot.x9,
      dot.y9
