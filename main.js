@@ -26,11 +26,9 @@ function setParametrs() {
     dot.x1,
     dot.y1
   );
-  if (dot.x1 !== undefined && NaN && '' && dot.y1 !== undefined && NaN && '') {
+  if ( (dot.x1 !== undefined || NaN || '') && (dot.y1 !== undefined || NaN || '') ) {
     checkPosition(n1, dot.x1, dot.y1);
   }
-
-  
 
   // Вторая точка
   dot.x2 = +form.value9.value;
@@ -216,43 +214,43 @@ function checkPosition(locationCircleAndDots, checkDotX = null, checkDotY = null
 
     case 0:
 
-      if (checkDotX === dot.x1 && checkDotY === dot.y1) {
+      if (checkDotX == dot.x1 && checkDotY == dot.y1) {
         form.value8.value = "Окружность и прямая не пересекаются!";
       }
 
-      if (form.value9.id == 2 && form.value10.id == 2) {
+      if (checkDotX == dot.x2 && checkDotY == dot.y2) {
         form.value11.value = "Окружность и прямая не пересекаются!";
       }
 
-      if (form.value12.id == 3 && form.value13.id == 3) {
+      if (checkDotX == dot.x3 && checkDotY == dot.y3) {
         form.value14.value = "Окружность и прямая не пересекаются!";
       }
 
-      if (form.value15.id == 4 && form.value16.id == 4) {
+      if (checkDotX == dot.x4 && checkDotY == dot.y4) {
         form.value17.value = "Окружность и прямая не пересекаются!";
       }
 
-      if (form.value18.id == 5 && form.value19.id == 5) {
+      if (checkDotX == dot.x5 && checkDotY == dot.y5) {
         form.value20.value = "Окружность и прямая не пересекаются!";
       }
 
-      if (form.value21.id == 6 && form.value22.id == 6) {
+      if (checkDotX == dot.x6 && checkDotY == dot.y6) {
         form.value23.value = "Окружность и прямая не пересекаются!";
       }
 
-      if (form.value24.id == 7 && form.value25.id == 7) {
+      if (checkDotX == dot.x7 && checkDotY == dot.y7) {
         form.value26.value = "Окружность и прямая не пересекаются!";
       }
 
-      if (form.value27.id == 8 && form.value28.id == 8) {
+      if (checkDotX == dot.x8 && checkDotY == dot.y8) {
         form.value29.value = "Окружность и прямая не пересекаются!";
       }
 
-      if (form.value30.id == 9 && form.value31.id == 9) {
+      if (checkDotX == dot.x9 && checkDotY == dot.y9) {
         form.value32.value = "Окружность и прямая не пересекаются!";
       }
 
-      if (form.value33.id == 10 && form.value34.id == 10) {
+      if (checkDotX == dot.x10 && checkDotY == dot.y10) {
         form.value35.value = "Окружность и прямая не пересекаются!";
       }
 
@@ -260,43 +258,43 @@ function checkPosition(locationCircleAndDots, checkDotX = null, checkDotY = null
 
     case 1:
 
-      if (checkDotX === dot.x1 && checkDotY === dot.y1) {
+      if (checkDotX == dot.x1 && checkDotY == dot.y1) {
         form.value8.value = "Окружность и прямая касаются!";
       }
 
-      if (form.value9.id == 2 && form.value10.id == 2) {
+      if (checkDotX == dot.x2 && checkDotY == dot.y2) {
         form.value11.value = "Окружность и прямая касаются!";
       }
 
-      if (form.value12.id == 3 && form.value13.id == 3) {
+      if (checkDotX == dot.x3 && checkDotY == dot.y3) {
         form.value14.value = "Окружность и прямая касаются!";
       }
 
-      if (form.value15.id == 4 && form.value16.id == 4) {
+      if (checkDotX == dot.x4 && checkDotY == dot.y4) {
         form.value17.value = "Окружность и прямая касаются!";
       }
 
-      if (form.value18.id == 5 && form.value19.id == 5) {
+      if (checkDotX == dot.x5 && checkDotY == dot.y5) {
         form.value20.value = "Окружность и прямая касаются!";
       }
 
-      if (form.value21.id == 6 && form.value22.id == 6) {
+      if (checkDotX == dot.x6 && checkDotY == dot.y6) {
         form.value23.value = "Окружность и прямая касаются!";
       }
 
-      if (form.value24.id == 7 && form.value25.id == 7) {
+      if (checkDotX == dot.x7 && checkDotY == dot.y7) {
         form.value26.value = "Окружность и прямая касаются!";
       }
 
-      if (form.value27.id == 8 && form.value28.id == 8) {
+      if (checkDotX == dot.x8 && checkDotY == dot.y8) {
         form.value29.value = "Окружность и прямая касаются!";
       }
 
-      if (form.value30.id == 9 && form.value31.id == 9) {
+      if (checkDotX == dot.x9 && checkDotY == dot.y9) {
         form.value32.value = "Окружность и прямая касаются!";
       }
 
-      if (form.value33.id == 10 && form.value34.id == 10) {
+      if (checkDotX == dot.x10 && checkDotY == dot.y10) {
         form.value35.value = "Окружность и прямая касаются!";
       }
 
@@ -304,43 +302,43 @@ function checkPosition(locationCircleAndDots, checkDotX = null, checkDotY = null
 
     case 2:
 
-      if (checkDotX === dot.x1 && checkDotY === dot.y1) {
+      if (checkDotX == dot.x1 && checkDotY == dot.y1) {
         form.value8.value = "Окружность и прямая пересекаются!";
       }
 
-      if (form.value9.id == 2 && form.value10.id == 2) {
+      if (checkDotX == dot.x2 && checkDotY == dot.y2) {
         form.value11.value = "Окружность и прямая пересекаются!";
       }
 
-      if (form.value12.id == 3 && form.value13.id == 3) {
+      if (checkDotX == dot.x3 && checkDotY == dot.y3) {
         form.value14.value = "Окружность и прямая пересекаются!";
       }
 
-      if (form.value15.id == 4 && form.value16.id == 4) {
+      if (checkDotX == dot.x4 && checkDotY == dot.y4) {
         form.value17.value = "Окружность и прямая пересекаются!";
       }
 
-      if (form.value18.id == 5 && form.value19.id == 5) {
+      if (checkDotX == dot.x5 && checkDotY == dot.y5) {
         form.value20.value = "Окружность и прямая пересекаются!";
       }
 
-      if (form.value21.id == 6 && form.value22.id == 6) {
+      if (checkDotX == dot.x6 && checkDotY == dot.y6) {
         form.value23.value = "Окружность и прямая пересекаются!";
       }
 
-      if (form.value24.id == 7 && form.value25.id == 7) {
+      if (checkDotX == dot.x7 && checkDotY == dot.y7) {
         form.value26.value = "Окружность и прямая пересекаются!";
       }
 
-      if (form.value27.id == 8 && form.value28.id == 8) {
+      if (checkDotX == dot.x8 && checkDotY == dot.y8) {
         form.value29.value = "Окружность и прямая пересекаются!";
       }
 
-      if (form.value30.id == 9 && form.value31.id == 9) {
+      if (checkDotX == dot.x9 && checkDotY == dot.y9) {
         form.value32.value = "Окружность и прямая пересекаются!";
       }
 
-      if (form.value33.id == 10 && form.value34.id == 10) {
+      if (checkDotX == dot.x10 && checkDotY == dot.y10) {
         form.value35.value = "Окружность и прямая пересекаются!";
       }
       
