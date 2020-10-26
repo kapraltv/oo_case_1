@@ -26,7 +26,10 @@ function setParametrs() {
     dot.x1,
     dot.y1
   );
-  checkPosition(n1);
+  if (dot.x1 !== undefined && NaN && '' && dot.y1 !== undefined && NaN && '') {
+    checkPosition(n1, dot.x1, dot.y1);
+  }
+
   
 
   // Вторая точка
@@ -42,7 +45,9 @@ function setParametrs() {
     dot.x2,
     dot.y2
   );
-  checkPosition(n2);
+  if (dot.x2 !== undefined && NaN && '' && dot.y2 !== undefined && NaN && '') {
+    checkPosition(n2, dot.x2 , dot.y2);
+  }
 
   // Третья точка
   dot.x3 = +form.value12.value;
@@ -57,7 +62,9 @@ function setParametrs() {
     dot.x3,
     dot.y3
   );
-  checkPosition(n3);
+  if (dot.x3 !== undefined && NaN && '' && dot.y3 !== undefined && NaN && '') {
+    checkPosition(n3, dot.x3, dot.y3);
+  }
 
   // Четвертая точка
   dot.x4 = +form.value15.value;
@@ -72,7 +79,9 @@ function setParametrs() {
     dot.x4,
     dot.y4
   );
-  checkPosition(n4);
+  if (dot.x4 !== undefined && NaN && '' && dot.y4 !== undefined && NaN && '') {
+    checkPosition(n4, dot.x4, dot.y4);
+  }
 
   // Пятая точка
   dot.x5 = +form.value18.value;
@@ -87,7 +96,9 @@ function setParametrs() {
     dot.x5,
     dot.y5
   );
-  checkPosition(n5);
+  if (dot.x5 !== undefined && NaN && '' && dot.y5 !== undefined && NaN && '') {
+    checkPosition(n5, dot.x5, dot.y5);
+  }
 
    // Шестая точка
    dot.x6 = +form.value21.value;
@@ -102,7 +113,9 @@ function setParametrs() {
      dot.x6,
      dot.y6
    );
-   checkPosition(n6);
+   if (dot.x6 !== undefined && NaN && '' && dot.y6 !== undefined && NaN && '') {
+    checkPosition(n6, dot.x6, dot.y6);
+  }
 
   //  Седьмая точка
    dot.x7 = +form.value24.value;
@@ -117,7 +130,9 @@ function setParametrs() {
      dot.x7,
      dot.y7
    );
-   checkPosition(n7);
+   if (dot.x7 !== undefined && NaN && '' && dot.y7 !== undefined && NaN && '') {
+    checkPosition(n7, dot.x7, dot.y7);
+  }
 
   //  Восьмая точка
    dot.x8 = +form.value27.value;
@@ -132,7 +147,9 @@ function setParametrs() {
      dot.x8,
      dot.y8
    );
-   checkPosition(n8);
+   if (dot.x8 !== undefined && NaN && '' && dot.y8 !== undefined && NaN && '') {
+    checkPosition(n8, dot.x8, dot.y8);
+  }
 
   //  Девитая точка
    dot.x9 = +form.value30.value;
@@ -147,7 +164,9 @@ function setParametrs() {
      dot.x9,
      dot.y9
    );
-   checkPosition(n9);
+   if (dot.x9 !== undefined && NaN && '' && dot.y9 !== undefined && NaN && '') {
+    checkPosition(n9, dot.x9, dot.y9);
+  }
 
    //  Десятая точка
    dot.x10 = +form.value33.value;
@@ -162,7 +181,9 @@ function setParametrs() {
      dot.x10,
      dot.y10
    );
-  checkPosition(n10);
+   if (dot.x10 !== undefined && NaN && '' && dot.y10 !== undefined && NaN && '') {
+    checkPosition(n10, dot.x10, dot.y10);
+  }
 
   draw();
 }
@@ -189,17 +210,13 @@ function locationCircleAndDots(x, y, r, x1, y1, x2, y2) {
   return 2;
 }
 
-function checkChange() {
-
-}
-
-function checkPosition(locationCircleAndDots) {
+function checkPosition(locationCircleAndDots, checkDotX = null, checkDotY = null) {
 
   switch (locationCircleAndDots) {
 
     case 0:
 
-      if (form.value6.id == 1 && form.value7.id == 1) {
+      if (checkDotX === dot.x1 && checkDotY === dot.y1) {
         form.value8.value = "Окружность и прямая не пересекаются!";
       }
 
@@ -243,7 +260,7 @@ function checkPosition(locationCircleAndDots) {
 
     case 1:
 
-      if (form.value6.id == 1 && form.value7.id == 1) {
+      if (checkDotX === dot.x1 && checkDotY === dot.y1) {
         form.value8.value = "Окружность и прямая касаются!";
       }
 
@@ -287,7 +304,7 @@ function checkPosition(locationCircleAndDots) {
 
     case 2:
 
-      if (form.value6.id == 1 && form.value7.id == 1) {
+      if (checkDotX === dot.x1 && checkDotY === dot.y1) {
         form.value8.value = "Окружность и прямая пересекаются!";
       }
 
